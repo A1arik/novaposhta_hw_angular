@@ -1,0 +1,19 @@
+<h1>novaposhta works!</h1>
+
+<select #selectArea (change)="changeArea(selectArea.value)" >
+  <option *ngFor="let area of getAreas" value={{area.Ref}}>
+    {{area.Description}}
+  </option>
+</select>
+
+<select #selectedCity (change)="changeCity(selectedCity.value)">
+  <option *ngFor="let city of getCites" value={{city.Ref}}>
+    {{city.Description}}
+  </option>
+</select>
+
+<select #selectedWarehouse>
+  <option *ngFor="let warehouse of getWarehouse" value={{warehouse.Ref}}>
+    {{warehouse.Description}}
+  </option>
+</select>
